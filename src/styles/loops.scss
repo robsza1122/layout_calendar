@@ -1,12 +1,13 @@
+@use "./variables.scss";
+
 @each $index, $margin in $start-day {
-  &--name-of-the-day-#{$margin} :first-child {
-    margin-left: calc(($index - 1)
-    * ($square-size + $gap));
+  .calendar--name-of-the-day-#{$margin} :first-child {
+    margin-left: calc(($index - 1) * ($square-size + $gap));
   }
 }
 
 @for $lastdays from 28 through 31 {
-  &--#{$lastdays}>:nth-child(n + #{$lastdays + 1}) {
+  .calendar--#{$lastdays}>:nth-child(n + #{$lastdays + 1}) {
     display: none;
   }
 }
