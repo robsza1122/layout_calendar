@@ -1,7 +1,19 @@
 @use "./variables.scss";
 
-@each $index, $margin in $start-day {
-  .calendar--name-of-the-day-#{$margin} :first-child {
+$square-size: 100px;
+$gap: 1px;
+$start-day: (
+  mon: 1,
+  tue: 2,
+  wed: 3,
+  thu: 4,
+  fri: 5,
+  sat: 6,
+  sun: 7
+);
+
+@each $nameOfTheDay, $index in $start-day {
+  .calendar--name-of-the-day-#{$nameOfTheDay} :first-child {
     margin-left: calc(($index - 1) * ($square-size + $gap));
   }
 }
