@@ -16,7 +16,7 @@ body {
 .calendar {
   display: flex;
   flex-flow: row wrap;
-  width: calc ($cell-size * 7 + $gap-size * 6);
+  width: calc($cell-size * 7 + $gap-size * 6);
   gap: $gap-size;
   padding: 10px;
   &__day {
